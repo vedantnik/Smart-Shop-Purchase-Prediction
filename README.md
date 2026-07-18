@@ -10,7 +10,9 @@
 [![Streamlit](https://img.shields.io/badge/Streamlit-App-FF4B4B?style=flat-square&logo=streamlit&logoColor=white)](https://streamlit.io/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg?style=flat-square)](LICENSE)
 
-[Live Demo](https://smart-shop-purchase-prediction-p6tfv7q3mapppmrshjjqkut.streamlit.app/)· [Dataset](data/shop_smart_ecommerce.xls) · [Report Bug](../../issues) · [Request Feature](../../issues)
+[![Open in Streamlit](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://smart-shop-purchase-prediction.streamlit.app/)
+
+[Live Demo](https://smart-shop-purchase-prediction.streamlit.app/) · [Dataset](data/shop_smart_ecommerce.xls) · [Report Bug](../../issues) · [Request Feature](../../issues)
 
 </div>
 
