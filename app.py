@@ -10,7 +10,7 @@ st.set_page_config(
     initial_sidebar_state="collapsed"
 )
 
-model = joblib.load("model\decision_tree.pkl")
+model = joblib.load("model/decision_tree.pkl")
 
 tree = model.named_steps["model"]
 feature_names = model.named_steps["preprocess"].get_feature_names_out()
