@@ -37,13 +37,31 @@ The dataset contains **~12,330 samples** and **18 features** (17 input features 
 
 **Feature Reference:**
 
-![Feature Description](assets/feature_description.png)
-<!-- ⬆️ Upload your feature name/description table screenshot here as: assets/feature_description.png -->
+| Feature | Description |
+|---|---|
+| `Administrative` | Number of pages visited related to account management (login, profile, etc.) |
+| `Administrative_Duration` | Total time (in seconds) spent on administrative pages |
+| `Informational` | Number of informational pages visited (FAQ, policies, etc.) |
+| `Informational_Duration` | Total time (in seconds) spent on informational pages |
+| `ProductRelated` | Number of product-related pages visited |
+| `ProductRelated_Duration` | Total time (in seconds) spent on product-related pages |
+| `BounceRates` | Percentage of visitors who leave the site after viewing only one page |
+| `ExitRates` | Percentage of exits from a given page |
+| `PageValues` | Average value of pages visited before completing a transaction |
+| `SpecialDay` | Closeness of the visit date to a special day (e.g., Valentine's Day, Mother's Day) |
+| `Month` | Month of the visit (Feb, Mar, May, etc.) |
+| `OperatingSystems` | Operating system used by the visitor (encoded) |
+| `Browser` | Browser used by the visitor (encoded) |
+| `Region` | Geographic region of the visitor (encoded) |
+| `TrafficType` | Source of traffic (e.g., direct, referral, ads) |
+| `VisitorType` | Type of visitor — `Returning_Visitor`, `New_Visitor`, or `Other` |
+| `Weekend` | Whether the visit occurred on a weekend |
+| `Revenue` | **Target variable** — whether the visitor made a purchase |
 
 **Class Distribution:**
 
 <p align="center">
-  <img src="assets/revenue_distribution.png" alt="Revenue Distribution" width="380">
+  <img src="images/Revenue_Distribution.png" alt="Revenue Distribution" width="380">
 </p>
 <!-- ⬆️ Upload "Revenue_Distribution" (pie chart) here as: assets/revenue_distribution.png -->
 
@@ -62,15 +80,15 @@ The dataset contains **~12,330 samples** and **18 features** (17 input features 
 
 <table>
   <tr>
-    <td><img src="assets/correlation_heatmap.png" alt="Correlation Heatmap"></td>
-    <td><img src="assets/bounce_rate_vs_revenue.png" alt="Bounce Rate vs Revenue"></td>
+    <td><img src="images/correlation_heatmap.png" alt="Correlation Heatmap"></td>
+    <td><img src="images/bounce_rates_vs_revenue.png" alt="Bounce Rate vs Revenue"></td>
   </tr>
   <tr>
-    <td><img src="assets/traffic_type_vs_revenue.png" alt="Traffic Type vs Revenue"></td>
-    <td><img src="assets/pagevalues_vs_revenue.png" alt="Page Values vs Revenue"></td>
+    <td><img src="images/traffic_type_vs_revenue.png" alt="Traffic Type vs Revenue"></td>
+    <td><img src="images/pages_visited_vs_revenue_dist.png" alt="Page Values vs Revenue"></td>
   </tr>
   <tr>
-    <td colspan="2" align="center"><img src="assets/special_day_vs_revenue.png" alt="Special Day vs Revenue" width="400"></td>
+    <td colspan="2" align="center"><img src="images/special_day_revenue_distribution.png" alt="Special Day vs Revenue" width="400"></td>
   </tr>
 </table>
 <!-- Upload these 5 EDA charts with these exact filenames into assets/:
@@ -122,9 +140,9 @@ Hyperparameter tuning was performed across all three models, including class-wei
 
 <table>
   <tr>
-    <td align="center"><b>Decision Tree</b><br><img src="assets/cf_decision_tree.png" width="260"></td>
-    <td align="center"><b>Logistic Regression</b><br><img src="assets/cf_logistic_regression.png" width="260"></td>
-    <td align="center"><b>SVM</b><br><img src="assets/cf_svm.png" width="260"></td>
+    <td align="center"><b>Decision Tree</b><br><img src="images/cf_decision_tree.png" width="260"></td>
+    <td align="center"><b>Logistic Regression</b><br><img src="images/cf_lr.png" width="260"></td>
+    <td align="center"><b>SVM</b><br><img src="images/cf_svm_classifier.png" width="260"></td>
   </tr>
 </table>
 <!-- Upload these 3 side by side with these exact filenames into assets/:
@@ -136,10 +154,16 @@ Hyperparameter tuning was performed across all three models, including class-wei
 
 ## 🧠 Feature Importance
 
-<p align="center">
-  <img src="assets/feature_importance.png" alt="Feature Importance" width="500">
-</p>
-<!-- ⬆️ Upload "most_imp_features" here as: assets/feature_importance.png -->
+- **Month_Oct**
+- **ExitRates**
+- **Administrative**
+- **Month_May**
+- **Month_Mar**
+- **BounceRates**
+- **Month_Sep**
+- **ProductRelated_Duration**
+- **Month_Nov**
+- **PageValues**
 
 ---
 
@@ -159,12 +183,12 @@ The trained model is deployed via an interactive **Streamlit** app that predicts
 
 <table>
   <tr>
-    <td align="center"><img src="assets/app_ui_1.png" width="300"></td>
-    <td align="center"><img src="assets/app_ui_2.png" width="300"></td>
+    <td align="center"><img src="images/app_ui_1.png" width="300"></td>
+    <td align="center"><img src="images/app_ui_2.png" width="300"></td>
   </tr>
   <tr>
-    <td align="center"><img src="assets/app_ui_3.png" width="300"></td>
-    <td align="center"><img src="assets/app_ui_4.png" width="300"></td>
+    <td align="center"><img src="images/app_ui_3.png" width="300"></td>
+    <td align="center"><img src="images/app_ui_4.png" width="300"></td>
   </tr>
 </table>
 <!-- Upload your 4 app screenshots with these exact filenames into assets/:
